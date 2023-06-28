@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+h2 {
+  color: white;
+  font-size: 5em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.boton {
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 20px 50px;
+  color: white;
+  background-color: transparent;
+  border: white solid 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container{
+    transition: all 2.5s ease;
+    overflow: hidden;
+}
+.container .fondo{
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+}
+.ryzen {
+  background: url("./src/assets/img/amd.avif") no-repeat right center/cover;
+  flex: 1;
+  .fondo{
+    background-color: rgba(135, 0, 0, 0.5);
+  }
+  .boton {
+    &:hover {
+      background-color: #181515;
+      border-color: #181515;
+    }
+  }
+}
+.intel {
+    flex: 1;
+  background: url("./src/assets/img/intel.jpeg")
+    no-repeat left center/cover;
+    .fondo{
+        background-color: rgba(0, 74, 135, 0.5);
+      }
+  .boton {
+    &:hover {
+      background-color: #158beb;
+      border-color: #158beb;
+    }
+  }
+}
+.active{
+    flex: 4;
+}
